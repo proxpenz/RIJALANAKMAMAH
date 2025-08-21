@@ -1,34 +1,32 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Video Otomatis</title>
+ <title>Video Fullscreen Autoplay</title>
+ <style>
+ body, html {
+   margin: 0;
+   padding: 0;
+   height: 100%;
+   overflow: hidden; /* Mencegah scrollbar jika video memiliki rasio aspek yang berbeda */
+ }
+ video {
+   position: fixed; /* Membuat video tetap di viewport saat di-scroll (meskipun tidak ada scroll) */
+   top: 0;
+   left: 0;
+   min-width: 100%;
+   min-height: 100%;
+   width: auto;
+   height: auto;
+   z-index: -100; /* Meletakkan video di belakang konten lain jika ada */
+ }
+ </style>
 </head>
 <body>
 
-  <h1>Video Saya</h1>
-  <p>Klik video di bawah ini untuk memutarnya.</p>
+ <video autoplay loop muted>
+   <source src="Demo_Ricuh_Teriakan_Kasar.mp4" type="video/mp4">
+   Browser Anda tidak mendukung tag video.
+ </video>
 
-  <video id="myVideo" width="640" height="360" controls>
-    <source src="Demo_Ricuh_Teriakan_Kasar.mp4" type="video/mp4">
-    Browser Anda tidak mendukung tag video.
-  </video>
-
-  <script>
-    var video = document.getElementById('myVideo');
-
-    // Menambahkan event listener untuk memulai autoplay saat video diklik
-    video.addEventListener('click', function() {
-      // Pastikan video tidak sedang diputar sebelum memulai
-      if (video.paused) {
-        video.play();
-      }
-    });
-
-    // Menambahkan event listener untuk menghentikan video jika sudah selesai
-    video.addEventListener('ended', function() {
-      console.log('Video selesai diputar.');
-    });
-  </script>
-
-</body>
+ </body>
 </html>
