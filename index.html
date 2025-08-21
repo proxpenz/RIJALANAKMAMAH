@@ -1,72 +1,34 @@
 <!DOCTYPE html>
-<html lang="id">
+<html>
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Motivasi untuk Rijal</title>
-  <style>
-    body {
-      background: linear-gradient(135deg, #e0f7fa, #e1bee7);
-      font-family: 'Segoe UI', sans-serif;
-      color: #2c3e50;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      text-align: center;
-      padding: 20px;
-    }
-    .card {
-      background: #fff;
-      padding: 40px;
-      border-radius: 15px;
-      box-shadow: 0 0 20px rgba(0,0,0,0.1);
-      max-width: 650px;
-    }
-    h1 {
-      font-size: 28px;
-      color: #8e44ad;
-    }
-    p {
-      font-size: 18px;
-      margin: 20px 0;
-    }
-    .quote {
-      font-style: italic;
-      color: #34495e;
-      margin-top: 30px;
-    }
-    img {
-      margin-top: 20px;
-      max-width: 100%;
-      border-radius: 12px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.2);
-    }
-    .footer {
-      margin-top: 30px;
-      font-size: 14px;
-      color: #aaa;
-    }
-  </style>
+  <title>Video Otomatis</title>
 </head>
 <body>
-  <div class="card">
-    <h1>🌟 Pesan Bijak untuk Rijal 🌟</h1>
-    <p>Rijal, hidup ini memang penuh tantangan...</p>
-    <p>Namun bukan berarti kamu harus berjuang sendirian, apalagi... di kamar sendirian 🤔</p>
-    <p>Karena di setiap tetesan peluh dan... eh, kamu tahu lah... 💦</p>
-    
-    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSIPxUg1Tps-iOzJ0M2_7L_0x64qT9Cl_HMog&s" />
 
-    <div class="quote">
-      "Jika tanganmu lelah bekerja, mungkin saatnya mencari pasangan yang nyata, bukan yang berbentuk .jpg" 💻
-    </div>
+  <h1>Video Saya</h1>
+  <p>Klik video di bawah ini untuk memutarnya.</p>
 
-    <p class="quote">— Motivator anonim, tapi paham banget kamu</p>
+  <video id="myVideo" width="640" height="360" controls>
+    <source src="Demo_Ricuh_Teriakan_Kasar.mp4" type="video/mp4">
+    Browser Anda tidak mendukung tag video.
+  </video>
 
-    <div class="footer">
-      Didedikasikan untuk Rijal, Sang Legenda Sendirian Tanpa Izin
-    </div>
-  </div>
+  <script>
+    var video = document.getElementById('myVideo');
+
+    // Menambahkan event listener untuk memulai autoplay saat video diklik
+    video.addEventListener('click', function() {
+      // Pastikan video tidak sedang diputar sebelum memulai
+      if (video.paused) {
+        video.play();
+      }
+    });
+
+    // Menambahkan event listener untuk menghentikan video jika sudah selesai
+    video.addEventListener('ended', function() {
+      console.log('Video selesai diputar.');
+    });
+  </script>
+
 </body>
 </html>
