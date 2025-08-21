@@ -1,32 +1,32 @@
 <!DOCTYPE html>
 <html>
 <head>
- <title>Video Fullscreen Autoplay</title>
- <style>
- body, html {
-   margin: 0;
-   padding: 0;
-   height: 100%;
-   overflow: hidden; /* Mencegah scrollbar jika video memiliki rasio aspek yang berbeda */
- }
- video {
-   position: fixed; /* Membuat video tetap di viewport saat di-scroll (meskipun tidak ada scroll) */
-   top: 0;
-   left: 0;
-   min-width: 100%;
-   min-height: 100%;
-   width: auto;
-   height: auto;
-   z-index: -100; /* Meletakkan video di belakang konten lain jika ada */
- }
- </style>
+  <title>Video Fullscreen Autoplay Dengan Suara</title>
+  <style>
+  body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow: hidden;
+  }
+  video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -100;
+  }
+  </style>
 </head>
 <body>
 
- <video autoplay loop muted>
-   <source src="Demo_Ricuh_Teriakan_Kasar.mp4" type="video/mp4">
-   Browser Anda tidak mendukung tag video.
- </video>
+  <video autoplay loop>
+    <source src="Demo_Ricuh_Teriakan_Kasar.mp4" type="video/mp4">
+    Browser Anda tidak mendukung tag video.
+  </video>
 
- </body>
+</body>
 </html>
